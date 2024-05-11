@@ -30,7 +30,9 @@ namespace Prakticheskaya_7_serv
             string username = usernameTextBox.Text;
             if (!string.IsNullOrEmpty(ipAddress) && !string.IsNullOrEmpty(username))
             {
-                //логика для клиента
+                Client chatClientWindow = new Client(username, ipAddress);
+                chatClientWindow.Show();
+                this.Close();
             }
             else
             {
