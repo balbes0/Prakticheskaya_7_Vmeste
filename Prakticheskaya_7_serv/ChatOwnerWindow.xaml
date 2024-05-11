@@ -1,0 +1,43 @@
+﻿<Window x:Class="Prakticheskaya_7_serv.ChatOwnerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakticheskaya_7_serv"
+        mc:Ignorable="d"
+        Title="ChatOwnerWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Пользователи</Label>
+            <ListBox x:Name="UsersListBox" Grid.Row="1"></ListBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="85*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Button Click="Button_Click">Посмотреть логи чата</Button>
+            <ListBox x:Name="MessagesListBox" Grid.Row="1"></ListBox>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click_1">Выйти</Button>
+                <TextBox x:Name="messageTextBox" Grid.Column="1" materialDesign:HintAssist.Hint="Введите сообщение" VerticalAlignment="Center" Margin="10, 0, 10, 0"></TextBox>
+                <Button Click="SendButton_Click" Grid.Column="2">Отправить</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
